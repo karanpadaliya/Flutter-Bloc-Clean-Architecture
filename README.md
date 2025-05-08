@@ -11,7 +11,7 @@
 
 <h3>✅ Step 1: Add Dependencies</h3>
   <pre><code class="language-yaml">
-dependencies:
+<b>dependencies:</b>
   http: ^1.4.0
   bloc: ^9.0.0
   flutter_bloc: ^9.1.1
@@ -26,7 +26,7 @@ dependencies:
   freezed: ^3.0.6
   google_fonts: ^6.2.1
 
-dev_dependencies:
+<b>dev_dependencies:</b>
   build_runner: ^2.4.15
   json_serializable: ^6.9.5
 </code></pre>
