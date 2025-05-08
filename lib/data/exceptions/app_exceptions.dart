@@ -24,6 +24,5 @@ class RequestTimeOutException extends AppExceptions {
 }
 
 class FetchDataException extends AppExceptions {
-  FetchDataException([String? message])
-      : super(message, '');
+  FetchDataException([String? message]) : super(message, '');
 }
