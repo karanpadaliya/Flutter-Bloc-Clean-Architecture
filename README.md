@@ -24,7 +24,7 @@
   equatable: ^2.0.7
   flutter_secure_storage: ^9.2.4
   freezed: ^3.0.6
-  google_fonts: ^6.2.1
+  google_fonts: ^6.2.1<\br>
 
 <b>dev_dependencies:</b>
   build_runner: ^2.4.15
