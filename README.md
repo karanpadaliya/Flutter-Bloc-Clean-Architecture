@@ -26,7 +26,7 @@
   freezed: ^3.0.6
   google_fonts: ^6.2.1 <br>
 
-<b>\n\ndev_dependencies:</b>
+<b>dev_dependencies:</b>
   build_runner: ^2.4.15
   json_serializable: ^6.9.5
 </code></pre>
