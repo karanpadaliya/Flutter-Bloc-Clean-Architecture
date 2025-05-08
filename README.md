@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>bloc_clean_architecture_yt</title>
-</head>
 <body>
 
   <h1>bloc_clean_architecture_yt</h1>
