@@ -1,34 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Bloc Clean Architecture - YT</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    pre {
-      background: #f5f5f5;
-      padding: 1rem;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-    h1, h2, h3 {
-      margin-top: 2rem;
-    }
-    code {
-      background-color: #eee;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-    }
-    hr {
-      margin: 2rem 0;
-    }
-  </style>
-</head>
 <body>
 
 <h1>Bloc Clean Architecture - YT</h1>
@@ -179,12 +150,5 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
 // New Method
 Navigator.pushNamed(context, RoutesName.homeScreen);
 </code></pre>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-text.min.js"></script>
-
 </body>
 </html>
