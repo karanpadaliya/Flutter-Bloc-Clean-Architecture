@@ -4,11 +4,35 @@
   <meta charset="UTF-8">
   <title>Bloc Clean Architecture - YT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    h1, h2, h3 {
+      margin-top: 2rem;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    hr {
+      margin: 2rem 0;
+    }
+  </style>
 </head>
 <body>
 
 <h1>Bloc Clean Architecture - YT</h1>
-<p>A new Flutter project using BLoC and Clean Architecture principles.</p>
+<p>A new Flutter project using <strong>BLoC</strong> and <strong>Clean Architecture</strong> principles.</p>
 
 <hr>
 
@@ -32,8 +56,7 @@
 
 dev_dependencies:
   build_runner: ^2.4.15
-  json_serializable: ^6.9.5
-</code></pre>
+  json_serializable: ^6.9.5</code></pre>
 
 <hr>
 
@@ -65,8 +88,7 @@ dev_dependencies:
 │   ├── login/
 │   │   └── login_screen.dart
 │   └── splash/
-│       └── splash_screen.dart
-</code></pre>
+│       └── splash_screen.dart</code></pre>
 
 <hr>
 
@@ -75,8 +97,7 @@ dev_dependencies:
   static const String splashScreen = 'splash';
   static const String loginScreen = 'login';
   static const String homeScreen = 'home';
-}
-</code></pre>
+}</code></pre>
 
 <hr>
 
@@ -104,8 +125,7 @@ class AppRoutes {
         );
     }
   }
-}
-</code></pre>
+}</code></pre>
 
 <hr>
 
@@ -127,8 +147,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: AppRoutes.generateRoute,
     );
   }
-}
-</code></pre>
+}</code></pre>
 
 <hr>
 
@@ -161,11 +180,11 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
 Navigator.pushNamed(context, RoutesName.homeScreen);
 </code></pre>
 
-<!-- PrismJS scripts for code highlighting -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-text.min.js"></script>
 
 </body>
 </html>
