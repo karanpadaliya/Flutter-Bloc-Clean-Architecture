@@ -63,6 +63,9 @@ lib/
 │   └── network/
 │       ├── base_api_services.dart          # Abstract base API methods (get, post, delete)
 │       └── network_services_api.dart       # Concrete API service implementations
+├── services/
+│   ├── splash/
+│       └── splash_services.dart            # Splash services
 ├── views/
 │   ├── splash/
 │   │   └── splash_screen.dart              # Splash screen UI
