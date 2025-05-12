@@ -128,9 +128,11 @@ class MyApp extends StatelessWidget {
   <li><code>round_button_widget.dart</code> – for consistent button styles</li>
   <li><code>internet_exception_widget.dart</code> – shows message when no internet</li>
 </ul>
+<hr>
 
 <h3>🎨 Step 8: Create Color File</h3>
 <p>Define all theme and color constants in <code>colors.dart</code> for maintaining consistent styling across the app.</p>
+<hr>
 
 <h3>🧩 Step 9: Add Exception Handling</h3>
 <p>In <code>data/exceptions/app_exceptions.dart</code>, define custom exception classes for better error handling:</p>
@@ -140,6 +142,9 @@ class MyApp extends StatelessWidget {
   <li><code>RequestTimeoutException</code></li>
   <li><code>FetchDataException</code></li>
 </ul>
+<hr>
+
+<h3>🧩 Step 10: Network API services</h3>
 
 <hr>
 
