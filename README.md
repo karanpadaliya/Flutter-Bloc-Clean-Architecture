@@ -57,15 +57,18 @@ lib/
 │   └── routes/
 │       ├── routes.dart                     # Route generator
 │       └── routes_name.dart                # Route name constants
+│
 ├── data/
 │   ├── exceptions/
 │   │   └── app_exceptions.dart             # Custom app exceptions
 │   └── network/
 │       ├── base_api_services.dart          # Abstract base API methods (get, post, delete)
 │       └── network_services_api.dart       # Concrete API service implementations
+│
 ├── services/
 │   ├── splash/
 │       └── splash_services.dart            # Splash services
+│
 ├── views/
 │   ├── splash/
 │   │   └── splash_screen.dart              # Splash screen UI
@@ -74,6 +77,7 @@ lib/
 │   ├── home/
 │   │   └── home_screen.dart                # Home screen UI
 │   └── view.dart/                          # Import all fill
+│
 └── main.dart                               # Entry point of the app
 
 </code></pre>
