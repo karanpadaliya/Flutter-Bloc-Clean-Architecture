@@ -77,10 +77,15 @@ lib/
 │   ├── splash/
 │   │   └── splash_screen.dart              # Splash screen UI
 │   ├── login/
-│   │   └── login_screen.dart               # Login screen UI
+│   │   │── login_screen.dart               # Login screen UI
+│   │   └── widgets/
+│   │       │── email_input_widget.dart     # Widget file
+│   │       │── login_button_widget.dart
+│   │       │── password_input_widget.dart
+│   │       └── widget.dart                 # Bearer file 
 │   ├── home/
 │   │   └── home_screen.dart                # Home screen UI
-│   └── view.dart/                          # Import all fill
+│   └── view.dart/                          # Bearer file
 │
 └── main.dart                               # Entry point of the app
 

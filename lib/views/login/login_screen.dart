@@ -30,12 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 20),
               PasswordInputWidget(passwordFocusNode: passwordFocusNode),
               SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formkey.currentState!.validate()) {}
-                },
-                child: Text('Login'),
-              ),
+              LoginButtonWidget(formkey: _formkey),
             ],
           ),
         ),
