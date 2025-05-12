@@ -65,8 +65,12 @@ lib/
 │       ├── base_api_services.dart          # Abstract base API methods (get, post, delete)
 │       └── network_services_api.dart       # Concrete API service implementations
 │
+├── models/
+│   └── user/
+│       └── user_model.dart            # Splash services
+│
 ├── services/
-│   ├── splash/
+│   └── splash/
 │       └── splash_services.dart            # Splash services
 │
 ├── views/
@@ -184,6 +188,10 @@ Future<dynamic> deleteApi(String url);
   <p>Then create actual implementations in <code>network_services_api.dart</code>.</p>
 
   <hr>
+
+<h3>🧩 Step 11: User model & Login Api</h3>
+
+<hr>
 
 <h2>🧠 Navigation Reference</h2>
   <pre><code class="language-dart">
