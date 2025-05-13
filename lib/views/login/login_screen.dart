@@ -11,7 +11,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final emailFocusNode = FocusNode();
   final passwordFocusNode = FocusNode();
-
   final _formkey = GlobalKey<FormState>();
 
   @override
