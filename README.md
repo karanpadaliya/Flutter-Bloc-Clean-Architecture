@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BLoC Clean Architecture - YT</title>
 </head>
 <body>
 
-  <h1>BLoC Clean Architecture - YT</h1>
-  <p>A new Flutter project using <strong>BLoC</strong> and <strong>Clean Architecture</strong> principles.</p>
+<h1>BLoC Clean Architecture - YT</h1>
+<p>A new Flutter project using <strong>BLoC</strong> and <strong>Clean Architecture</strong> principles.</p>
 
-  <hr>
+<hr>
 
 <h2>🚀 Getting Started</h2>
 
 <h3>✅ Step 1: Add Dependencies</h3>
-  <pre><code class="language-yaml">
+<pre><code class="language-yaml">
 dependencies:
   http: ^1.4.0
   bloc: ^9.0.0
@@ -36,70 +36,80 @@ dev_dependencies:
   json_serializable: ^6.9.5
 </code></pre>
 
-  <hr>
+<hr>
 
 <h3>🛠️ Step 2: Change SDK Version</h3>
-  <p>In <code>android/app/build.gradle.kts</code>:</p>
-  <pre><code class="language-kotlin">minSdk = 21</code></pre>
+<p>In <code>android/app/build.gradle.kts</code>:</p>
+<pre><code class="language-kotlin">minSdk = 21</code></pre>
 
-  <hr>
+<hr>
 
 <h3>📁 Step 3: Project Structure</h3>
-  <pre><code class="language-text">
+<pre><code>
 lib/
 ├── bloc/
-│   ├── login_bloc.dart
-│   ├── login_event.dart
-│   └── login_states.dart
+│   ├── login_bloc.dart                  # BLoC logic for login
+│   ├── login_event.dart                 # Events for login
+│   └── login_states.dart                # States for login
 │
 ├── config/
 │   ├── colors/
-│   │   └── colors.dart                     # App theme colors
+│   │   └── colors.dart                  # App theme colors
 │   ├── components/
 │   │   ├── internet_exception_widget.dart  # Widget for no internet UI
 │   │   ├── loading_widget.dart             # Widget for loaders/spinners
 │   │   └── round_button_widget.dart        # Reusable round button
-│   └── routes/
-│       ├── routes.dart                     # Route generator
-│       └── routes_name.dart                # Route name constants
+│   ├── routes/
+│   │   ├── routes.dart                  # Route generator
+│   │   └── routes_name.dart             # Route name constants
+│   └── app_url.dart                     # Base URLs & endpoints
 │
 ├── data/
 │   ├── exceptions/
-│   │   └── app_exceptions.dart             # Custom app exceptions
+│   │   └── app_exceptions.dart          # Custom app exceptions
 │   └── network/
-│       ├── base_api_services.dart          # Abstract base API methods (get, post, delete)
-│       └── network_services_api.dart       # Concrete API service implementations
+│       ├── base_api_services.dart      # Abstract base API methods (get, post, delete)
+│       └── network_services_api.dart   # Concrete API service implementations
 │
 ├── models/
 │   └── user/
-│       └── user_model.dart            # Splash services
+│       ├── user_model.dart             # User model class
+│       ├── user_model.freezed.dart     # Freezed-generated code
+│       └── user_model.g.dart           # JSON serialization code
+│
+├── repository/
+│   └── auth/
+│       └── login_repository.dart       # Repository for login logic
 │
 ├── services/
 │   └── splash/
-│       └── splash_services.dart            # Splash services
+│       └── splash_services.dart        # Logic for splash screen navigation
+│
+├── utils/
+│   ├── enums.dart                      # Common enums
+│   └── validations.dart                # Form and field validations
 │
 ├── views/
 │   ├── splash/
-│   │   └── splash_screen.dart              # Splash screen UI
+│   │   └── splash_screen.dart          # Splash screen UI
 │   ├── login/
-│   │   │── login_screen.dart               # Login screen UI
+│   │   ├── login_screen.dart           # Login screen UI
 │   │   └── widgets/
-│   │       │── email_input_widget.dart     # Widget file
-│   │       │── login_button_widget.dart
-│   │       │── password_input_widget.dart
-│   │       └── widget.dart                 # Bearer file 
+│   │       ├── email_input_widget.dart # Email input field
+│   │       ├── login_button_widget.dart# Login button
+│   │       ├── password_input_widget.dart # Password input
+│   │       └── widget.dart             # Widget barrel file
 │   ├── home/
-│   │   └── home_screen.dart                # Home screen UI
-│   └── view.dart/                          # Bearer file
+│   │   └── home_screen.dart            # Home screen UI
+│   └── view.dart/                      # Barrel file for views
 │
-└── main.dart                               # Entry point of the app
-
+└── main.dart                           # Entry point of the app
 </code></pre>
 
-  <hr>
+<hr>
 
 <h3>📌 Step 4: Define Route Names</h3>
-  <pre><code class="language-dart">
+<pre><code class="language-dart">
 class RoutesName {
   static const String splashScreen = 'splash';
   static const String loginScreen = 'login';
@@ -107,10 +117,10 @@ class RoutesName {
 }
 </code></pre>
 
-  <hr>
+<hr>
 
 <h3>🧭 Step 5: Write Route Generator</h3>
-  <pre><code class="language-dart">
+<pre><code class="language-dart">
 import 'package:flutter/material.dart';
 import '../../views/home/home_screen.dart';
 import '../../views/login/login_screen.dart';
@@ -137,10 +147,10 @@ class AppRoutes {
 }
 </code></pre>
 
-  <hr>
+<hr>
 
 <h3>🏁 Step 6: Add Routes in <code>main.dart</code></h3>
-  <pre><code class="language-dart">
+<pre><code class="language-dart">
 import 'package:flutter/material.dart';
 import 'config/routes/routes.dart';
 import 'config/routes/routes_name.dart';
@@ -161,50 +171,51 @@ class MyApp extends StatelessWidget {
 }
 </code></pre>
 
-  <hr>
+<hr>
 
 <h3>🏗️ Step 7: Create Components</h3>
-  <ul>
-    <li><code>loading_widget.dart</code> – for showing loading indicators</li>
-    <li><code>round_button_widget.dart</code> – for consistent button styles</li>
-    <li><code>internet_exception_widget.dart</code> – shows message when no internet</li>
-  </ul>
+<ul>
+  <li><code>loading_widget.dart</code> – for showing loading indicators</li>
+  <li><code>round_button_widget.dart</code> – for consistent button styles</li>
+  <li><code>internet_exception_widget.dart</code> – shows message when no internet</li>
+</ul>
 
-  <hr>
+<hr>
 
 <h3>🎨 Step 8: Create Color File</h3>
-  <p>Define all theme and color constants in <code>colors.dart</code> for maintaining consistent styling across the app.</p>
+<p>Define all theme and color constants in <code>colors.dart</code> for maintaining consistent styling across the app.</p>
 
-  <hr>
+<hr>
 
 <h3>🧩 Step 9: Add Exception Handling</h3>
-  <p>In <code>data/exceptions/app_exceptions.dart</code>, define custom exception classes for better error handling:</p>
-  <ul>
-    <li><code>NoInternetException</code></li>
-    <li><code>UnauthorizedException</code></li>
-    <li><code>RequestTimeoutException</code></li>
-    <li><code>FetchDataException</code></li>
-  </ul>
+<p>In <code>data/exceptions/app_exceptions.dart</code>, define custom exception classes for better error handling:</p>
+<ul>
+  <li><code>NoInternetException</code></li>
+  <li><code>UnauthorizedException</code></li>
+  <li><code>RequestTimeoutException</code></li>
+  <li><code>FetchDataException</code></li>
+</ul>
 
-  <hr>
+<hr>
 
 <h3>🧩 Step 10: Network API Services</h3>
-  <p>Create <code>data/network/base_api_services.dart</code> with:</p>
-  <pre><code class="language-dart">
+<p>Create <code>data/network/base_api_services.dart</code> with:</p>
+<pre><code class="language-dart">
 Future<dynamic> getApi(String url);
 Future<dynamic> postApi(String url, var data);
 Future<dynamic> deleteApi(String url);
 </code></pre>
-  <p>Then create actual implementations in <code>network_services_api.dart</code>.</p>
+<p>Then create actual implementations in <code>network_services_api.dart</code>.</p>
 
-  <hr>
+<hr>
 
-<h3>🧩 Step 11: User model & Login Api</h3>
+<h3>🧩 Step 11: User model & Login API</h3>
+<p>Implement <code>user_model.dart</code> and login API handling inside repository.</p>
 
 <hr>
 
 <h2>🧠 Navigation Reference</h2>
-  <pre><code class="language-dart">
+<pre><code class="language-dart">
 // Old Method
 Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
 
