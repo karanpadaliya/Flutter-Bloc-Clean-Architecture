@@ -48,62 +48,62 @@ dev_dependencies:
 <pre><code>
 lib/
 ├── bloc/
-│   ├── login_bloc.dart                  # BLoC logic for login
-│   ├── login_event.dart                 # Events for login
-│   └── login_states.dart                # States for login
+│   ├── login_bloc.dart                     # BLoC logic for login
+│   ├── login_event.dart                    # Events for login
+│   └── login_states.dart                   # States for login
 │
 ├── config/
 │   ├── colors/
-│   │   └── colors.dart                  # App theme colors
+│   │   └── colors.dart                     # App theme colors
 │   ├── components/
 │   │   ├── internet_exception_widget.dart  # Widget for no internet UI
 │   │   ├── loading_widget.dart             # Widget for loaders/spinners
 │   │   └── round_button_widget.dart        # Reusable round button
 │   ├── routes/
-│   │   ├── routes.dart                  # Route generator
-│   │   └── routes_name.dart             # Route name constants
-│   └── app_url.dart                     # Base URLs & endpoints
+│   │   ├── routes.dart                     # Route generator
+│   │   └── routes_name.dart                # Route name constants
+│   └── app_url.dart                        # Base URLs & endpoints
 │
 ├── data/
 │   ├── exceptions/
-│   │   └── app_exceptions.dart          # Custom app exceptions
+│   │   └── app_exceptions.dart             # Custom app exceptions
 │   └── network/
-│       ├── base_api_services.dart      # Abstract base API methods (get, post, delete)
-│       └── network_services_api.dart   # Concrete API service implementations
+│       ├── base_api_services.dart          # Abstract base API methods (get, post, delete)
+│       └── network_services_api.dart       # Concrete API service implementations
 │
 ├── models/
 │   └── user/
-│       ├── user_model.dart             # User model class
-│       ├── user_model.freezed.dart     # Freezed-generated code
-│       └── user_model.g.dart           # JSON serialization code
+│       ├── user_model.dart                 # User model class
+│       ├── user_model.freezed.dart         # Freezed-generated code
+│       └── user_model.g.dart               # JSON serialization code
 │
 ├── repository/
 │   └── auth/
-│       └── login_repository.dart       # Repository for login logic
+│       └── login_repository.dart           # Repository for login logic
 │
 ├── services/
 │   └── splash/
-│       └── splash_services.dart        # Logic for splash screen navigation
+│       └── splash_services.dart            # Logic for splash screen navigation
 │
 ├── utils/
-│   ├── enums.dart                      # Common enums
-│   └── validations.dart                # Form and field validations
+│   ├── enums.dart                          # Common enums
+│   └── validations.dart                    # Form and field validations
 │
 ├── views/
 │   ├── splash/
-│   │   └── splash_screen.dart          # Splash screen UI
+│   │   └── splash_screen.dart              # Splash screen UI
 │   ├── login/
-│   │   ├── login_screen.dart           # Login screen UI
+│   │   ├── login_screen.dart               # Login screen UI
 │   │   └── widgets/
-│   │       ├── email_input_widget.dart # Email input field
-│   │       ├── login_button_widget.dart# Login button
-│   │       ├── password_input_widget.dart # Password input
-│   │       └── widget.dart             # Widget barrel file
+│   │       ├── email_input_widget.dart     # Email input field
+│   │       ├── login_button_widget.dart    # Login button
+│   │       ├── password_input_widget.dart  # Password input
+│   │       └── widget.dart                 # Widget barrel file
 │   ├── home/
-│   │   └── home_screen.dart            # Home screen UI
-│   └── view.dart/                      # Barrel file for views
+│   │   └── home_screen.dart                # Home screen UI
+│   └── view.dart/                          # Barrel file for views
 │
-└── main.dart                           # Entry point of the app
+└── main.dart                               # Entry point of the app
 </code></pre>
 
 <hr>
