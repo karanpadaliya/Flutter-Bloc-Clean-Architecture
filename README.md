@@ -47,6 +47,11 @@ dev_dependencies:
 <h3>📁 Step 3: Project Structure</h3>
   <pre><code class="language-text">
 lib/
+├── bloc/
+│   ├── login_bloc.dart
+│   ├── login_event.dart
+│   └── login_states.dart
+│
 ├── config/
 │   ├── colors/
 │   │   └── colors.dart                     # App theme colors
