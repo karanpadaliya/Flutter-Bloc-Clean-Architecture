@@ -2,7 +2,7 @@
 <html lang="en">
 <body>
 
-<h1>BLoC Clean Architecture - YT</h1>
+<h1>BLoC Clean Architecture</h1>
 <p>A new Flutter project using <strong>BLoC</strong> and <strong>Clean Architecture</strong> principles.</p>
 
 <hr>
